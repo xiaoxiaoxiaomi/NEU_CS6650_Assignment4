@@ -1,7 +1,6 @@
 *.iml
 .idea
 
-lib
 out
 target
 resources
