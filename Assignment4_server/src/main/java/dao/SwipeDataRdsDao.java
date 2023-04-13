@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.dbcp2.*;
 
-public class SwipeDataDao {
+public class SwipeDataRdsDao {
 
   private static BasicDataSource dataSource;
 
-  public SwipeDataDao() throws SQLException {
+  public SwipeDataRdsDao() throws SQLException {
     dataSource = DBCPDataSource.getDataSource();
   }
 

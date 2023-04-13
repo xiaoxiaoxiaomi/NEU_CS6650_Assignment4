@@ -1,7 +1,7 @@
 package servlet;
 
 import com.google.gson.Gson;
-import dao.SwipeDataDao;
+import dao.SwipeDataRdsDao;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -11,13 +11,13 @@ import model.Message;
 
 public class MatchesServlet extends HttpServlet {
 
-  private SwipeDataDao swipeDataDao;
+  private SwipeDataRdsDao swipeDataRdsDao;
   private Gson gson;
 
   @Override
   public void init() {
     try {
-      this.swipeDataDao = new SwipeDataDao();
+      this.swipeDataRdsDao = new SwipeDataRdsDao();
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -51,7 +51,7 @@ public class MatchesServlet extends HttpServlet {
     }
     String userID = urlParts[1];
     try {
-      List<String> matches = swipeDataDao.getMatches(userID);
+      List<String> matches = swipeDataRdsDao.getMatches(userID);
       if (matches.isEmpty()) {
         res.setStatus(HttpServletResponse.SC_NOT_FOUND);
         res.getWriter().println(gson.toJson(new Message("User not found!")));

@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 class Consumer implements Runnable {
 
 
-  private static final String BASE_PATH = "http://34.220.196.131:8080/Assignment4_server_war/";
+  private static final String BASE_PATH = "http://localhost:8080/Assignment4_server_war_exploded/";
   private static final int MAX_RETRY_TIMES = 5;
   private BlockingQueue<SwipeData> buffer;
   private final AtomicInteger succCnt;

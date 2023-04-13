@@ -1,7 +1,7 @@
 package servlet;
 
 import com.google.gson.Gson;
-import dao.SwipeDataDao;
+import dao.SwipeDataRdsDao;
 import java.io.IOException;
 import java.sql.SQLException;
 import javax.servlet.http.*;
@@ -10,13 +10,13 @@ import model.StatsResponse;
 
 public class StatsServlet extends HttpServlet {
 
-  private SwipeDataDao swipeDataDao;
+  private SwipeDataRdsDao swipeDataRdsDao;
   private Gson gson;
 
   @Override
   public void init() {
     try {
-      this.swipeDataDao = new SwipeDataDao();
+      this.swipeDataRdsDao = new SwipeDataRdsDao();
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -50,7 +50,7 @@ public class StatsServlet extends HttpServlet {
     }
     String userID = urlParts[1];
     try {
-      int[] stats = swipeDataDao.getStats(userID);
+      int[] stats = swipeDataRdsDao.getStats(userID);
       if (stats == null) {
         res.setStatus(HttpServletResponse.SC_NOT_FOUND);
         res.getWriter().println(gson.toJson(new Message("User not found!")));
