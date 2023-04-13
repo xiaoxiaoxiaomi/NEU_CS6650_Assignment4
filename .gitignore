@@ -1,0 +1,11 @@
+*.iml
+.idea
+
+lib
+out
+target
+web
+resources
+
+Labs
+report
