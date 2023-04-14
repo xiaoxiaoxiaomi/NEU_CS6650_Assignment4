@@ -6,7 +6,7 @@ public class DBCPDataSource {
 
   private static BasicDataSource dataSource;
   // NEVER store sensitive information below in plain text!
-  private static final String HOST_NAME = "swipe-data-db-instance-replica.ckyq9ljfemg7.us-west-2.rds.amazonaws.com";
+  private static final String HOST_NAME = "swipe-data-db-instance.ckyq9ljfemg7.us-west-2.rds.amazonaws.com";
   private static final String PORT = "3306";
   private static final String DATABASE = "swipe_data";
   private static final String USERNAME = "admin";
