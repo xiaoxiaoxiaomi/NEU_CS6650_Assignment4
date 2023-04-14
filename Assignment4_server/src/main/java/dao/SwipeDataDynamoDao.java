@@ -16,9 +16,9 @@ public class SwipeDataDynamoDao {
   private DynamoDbClient dynamoDbClient;
 
   public SwipeDataDynamoDao() {
-    String accessKeyId = "ASIA5G5IHQACV4AR3P6R";
-    String secretAccessKey = "BxCcFtUsvX0cXsmbB2q0mMwQ2hN1+eUK206lloNV";
-    String sessionToken = "FwoGZXIvYXdzEAcaDMHpGM+X5kmlsezxMSLLATMqac75RU1hrlm5bZ0zFKN6P31gVO3allKjCVdCnT/r7G/ZmNZHP/uGnWYrZPikqQo3qL0nZ/wypgjgd3lENykYyhyRoA/EOgCXrYR1cR7lDg1l7P+YaoH2gfEhfb2jPXCUQKlJ/j6R37t3DR0SmH/+gHoCaJaSqVa0yuqPVottB1U4Y2v27bPybrAG7A7UNtiIpe0CEqHZQExYVGgTuEEl82ciZSuGzaNdVuLASsyGaUtMqamsY0lnuZ85m3l3LVOkrcogX6x60rpxKOvo4aEGMi3dcnMIAG0a9AhtVYqd6TrIb2f/AIvoe4UX1QQSdTbVI5sa6uQjJ8LI/k7F2lI=";
+    String accessKeyId = "ASIA5G5IHQAC26M7B6P4";
+    String secretAccessKey = "g0il/FBkJB3ti9GDefxAb3tENqPGJlqQyBTbkCwm";
+    String sessionToken = "FwoGZXIvYXdzEBAaDKGRLnFuSuXj4HIAGCLLARiuVAzu11EHr9diKkvAGGSo2+rg7ANh/8YKf2NNWSICONYqd9Kn7Qpicz7Pk8bR8D7Qk2wI5c3mN3KZj6h8o0SPygUYsU7+4ZlMeXlVok8iUa4/qJZOez0UuH8GLSphUeJQ8KIXBDZ98W7ecB15d8Aao3MQ+w+s9iKOxLHFQF9UGWSPaKwvJdfxFjUKHEqo/wtc1l+vL5/8iWLQKFxScHwybGtgKf3LIlDKkqvQu0VISo5YQmr+0cPpyquY9CPIGhAzFOcoEBZJssEiKKHx46EGMi3jxFwfAqbjSJocXvIw+LS2KSmVQyf8wqOiLHOH1yFlEEBqKdKH3aA6N7h6mqU=";
     AwsSessionCredentials awsCredentials = AwsSessionCredentials.create(accessKeyId,
         secretAccessKey, sessionToken);
     StaticCredentialsProvider credentialsProvider = StaticCredentialsProvider.create(
@@ -29,7 +29,7 @@ public class SwipeDataDynamoDao {
         .build();
   }
 
-  public void updateUserLikesDislikes(String swiper, String leftOrRight) {
+    public void updateUserLikesDislikes(String swiper, String leftOrRight) {
     String tableName = "user_likes_dislikes";
     String columnName = leftOrRight.equals("right") ? "numLikes" : "numDislikes";
     UpdateItemRequest updateRequest = UpdateItemRequest.builder()
