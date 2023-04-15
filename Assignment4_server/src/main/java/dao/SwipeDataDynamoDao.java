@@ -16,9 +16,9 @@ public class SwipeDataDynamoDao {
   private DynamoDbClient dynamoDbClient;
 
   public SwipeDataDynamoDao() {
-    String accessKeyId = "ASIA5G5IHQAC26M7B6P4";
-    String secretAccessKey = "g0il/FBkJB3ti9GDefxAb3tENqPGJlqQyBTbkCwm";
-    String sessionToken = "FwoGZXIvYXdzEBAaDKGRLnFuSuXj4HIAGCLLARiuVAzu11EHr9diKkvAGGSo2+rg7ANh/8YKf2NNWSICONYqd9Kn7Qpicz7Pk8bR8D7Qk2wI5c3mN3KZj6h8o0SPygUYsU7+4ZlMeXlVok8iUa4/qJZOez0UuH8GLSphUeJQ8KIXBDZ98W7ecB15d8Aao3MQ+w+s9iKOxLHFQF9UGWSPaKwvJdfxFjUKHEqo/wtc1l+vL5/8iWLQKFxScHwybGtgKf3LIlDKkqvQu0VISo5YQmr+0cPpyquY9CPIGhAzFOcoEBZJssEiKKHx46EGMi3jxFwfAqbjSJocXvIw+LS2KSmVQyf8wqOiLHOH1yFlEEBqKdKH3aA6N7h6mqU=";
+    String accessKeyId = "ASIA5G5IHQACTBFWTR4Y";
+    String secretAccessKey = "uiScbNibsxBkm/kyBH3X78wXbc+9QwCvKbiWcR7U";
+    String sessionToken = "FwoGZXIvYXdzEB8aDL+n+UFEdcIzv++Z8CLLAUs3Agaj2XsiUbMyDwofOf+pi8SWb4BVjyqBVLtP0MOjg/LMxu0sR16N8alsVWtSd7P0GzigD1rcjoPIOeAyr/4qglWU189aMnDRT1jFKmLc5MaxtYCMl9A4YhLtNd/RMwy/qpi0v6JQ5YbKWepMPMExuGheWwXSmKUSvNJt0/gp0T4X1UMwk+dignRBrQ3tVBP6XRXByyw/InspK+X8gf1OhvJ06eRc3AiYcjGytv/iJms3DSFIx+sQ9gnz/CUFPqqYsxF/wsnP5+DcKPGD56EGMi0RG70/U2J/Op5OAytSuhr7qUSuqRL4A20w2nD5KJk1VP7rxX1L0wSBWSmdgxw=";
     AwsSessionCredentials awsCredentials = AwsSessionCredentials.create(accessKeyId,
         secretAccessKey, sessionToken);
     StaticCredentialsProvider credentialsProvider = StaticCredentialsProvider.create(

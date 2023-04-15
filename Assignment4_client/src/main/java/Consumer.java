@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 class Consumer implements Runnable {
 
-  private static final String BASE_PATH = "http://35.93.47.104:8080/Assignment4_server_war/";
+  private static final String BASE_PATH = "http://load-balancer-2110539622.us-west-2.elb.amazonaws.com:8080/Assignment4_server_war/";
   private static final int MAX_RETRY_TIMES = 5;
   private BlockingQueue<SwipeData> buffer;
   private final AtomicInteger succCnt;
